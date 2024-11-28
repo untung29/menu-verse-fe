@@ -9,16 +9,19 @@ export const GET_MENUS = gql`
       startDate
       state
       sections {
-        description
-        id
-        label
-        state
-        items {
+        detail {
           id
           label
-          description
-          price
+          items {
+            detail {
+              label
+              description
+              price
+            }
+            displayOrder
+          }
         }
+        displayOrder
       }
     }
   }

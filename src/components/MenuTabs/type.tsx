@@ -2,7 +2,12 @@ export interface MenuType {
   endDate?: string;
   id: string;
   label: string;
-  sections: Array<{ id: string; label: string; items: Array<ItemType> }>;
+  sections: Array<SectionType>;
+}
+
+export interface SectionType {
+  detail: { id: string; label: string; items: Array<ItemType> };
+  displayOrder: number;
 }
 
 export interface GetMenuResponseType {
@@ -10,8 +15,6 @@ export interface GetMenuResponseType {
 }
 
 export interface ItemType {
-  id: string;
-  label: string;
-  description: string;
-  price: string;
+  detail: { id: string; label: string; description: string; price: string };
+  displayOrder: number;
 }

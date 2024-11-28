@@ -16,7 +16,7 @@ const MenuTabs = ({ menus }: { menus: Array<MenuType> }) => {
       </Tabs.List>
 
       {menus.map((menu) => {
-        return <MenuTabPanel menu={menu} />;
+        return <MenuTabPanel key={menu.id} menu={menu} />;
       })}
     </Tabs>
   );
