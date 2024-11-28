@@ -1,0 +1,12 @@
+.tabPanel {
+  padding-left: 1rem;
+  gap: 1rem;
+}
+
+.sectionContainer {
+  margin-bottom: 2rem;
+}
+
+.sectionTitleContainer {
+  margin-bottom: 1rem;
+}

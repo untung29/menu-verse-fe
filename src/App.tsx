@@ -4,10 +4,10 @@ import { createTheme, MantineProvider } from "@mantine/core";
 import MenuTabs from "./components/MenuTabs";
 import { useQuery } from "@apollo/client";
 import { GET_MENUS } from "./graphql/queries/menuQueries";
-import { GetMenuResponse } from "./components/MenuTabs/types";
+import { GetMenuResponseType } from "./components/MenuTabs/type";
 
 function App() {
-  const { loading, error, data } = useQuery<GetMenuResponse>(GET_MENUS);
+  const { loading, error, data } = useQuery<GetMenuResponseType>(GET_MENUS);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
