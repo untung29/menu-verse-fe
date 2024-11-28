@@ -23,6 +23,7 @@ function App() {
       md: "992",
       lg: "1200",
     },
+    fontFamily: "'Courier New', Courier, monospace",
   });
 
   return (
