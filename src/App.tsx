@@ -1,28 +1,20 @@
 import "./App.css";
 import "@mantine/core/styles.css";
 import { createTheme, MantineProvider } from "@mantine/core";
-// import { useQuery } from "@apollo/client";
-// import { GET_MENUS } from "./graphql/queries/menuQueries";
-// import { useDisclosure } from "@mantine/hooks";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import routes from "./utils/routes";
-
-// interface GetMenuResponse {
-//   menus: Array<{
-//     endDate?: string;
-//     id: string;
-//     label: string;
-//     sections: Array<{ id: string; label: string }>;
-//   }>;
-// }
+import MenuTabs from "./components/MenuTabs";
+import { useQuery } from "@apollo/client";
+import { GET_MENUS } from "./graphql/queries/menuQueries";
+import { GetMenuResponse } from "./components/MenuTabs/types";
 
 function App() {
-  // const navigate = useNavigate();
+  const { loading, error, data } = useQuery<GetMenuResponse>(GET_MENUS);
 
-  // const { loading, error } = useQuery<GetMenuResponse>(GET_MENUS);
-
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+  if (!data || !data.menus.length)
+    return (
+      <p>Menu is not available at the moment, please try again next time</p>
+    );
 
   const theme = createTheme({
     breakpoints: {
@@ -33,7 +25,11 @@ function App() {
     },
   });
 
-  return <MantineProvider theme={theme}>Untung</MantineProvider>;
+  return (
+    <MantineProvider theme={theme}>
+      <MenuTabs menus={data.menus} />
+    </MantineProvider>
+  );
 }
 
 export default App;
