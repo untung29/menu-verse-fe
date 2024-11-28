@@ -10,17 +10,25 @@ const MenuTabPanel = ({ menu }: { menu: MenuType }) => {
         return (
           <Box className={classes.sectionContainer}>
             <Box className={classes.sectionTitleContainer}>
-              <Text size="1.5rem" fw={600} ta="left">
+              <Text size="2rem" fw={600} ta="left">
                 {section.label}
               </Text>
             </Box>
 
-            <ItemCard
-              label={section.items[0].label}
-              imgUrl={"https://picsum.photos/200/200"}
-              description={section.items[0].description}
-              price={section.items[0].price}
-            />
+            <div className={classes.gridContainer}>
+              {section.items.map((item) => {
+                return (
+                  <ItemCard
+                    label={item.label}
+                    imgUrl={
+                      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"
+                    }
+                    description={item.description}
+                    price={item.price}
+                  />
+                );
+              })}
+            </div>
           </Box>
         );
       })}

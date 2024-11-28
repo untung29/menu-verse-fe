@@ -7,14 +7,11 @@ const MenuTabs = ({ menus }: { menus: Array<MenuType> }) => {
     <Tabs color="red" defaultValue={menus[0].id} orientation="vertical">
       <Tabs.List>
         {menus.map((menu) => {
-          return [
+          return (
             <Tabs.Tab key={menu.id} value={menu.id}>
               {menu.label}
-            </Tabs.Tab>,
-            <Tabs.Tab key={"2"} value={"2"}>
-              {menu.label}
-            </Tabs.Tab>,
-          ];
+            </Tabs.Tab>
+          );
         })}
       </Tabs.List>
 
