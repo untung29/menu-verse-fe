@@ -1,5 +1,6 @@
 import { Tabs } from "@mantine/core";
 import { Menu } from "./types";
+import MenuTabPanel from "../MenuTabPanel";
 
 const MenuTabs = ({ menus }: { menus: Array<Menu> }) => {
   return (
@@ -14,9 +15,9 @@ const MenuTabs = ({ menus }: { menus: Array<Menu> }) => {
         })}
       </Tabs.List>
 
-      <Tabs.Panel value={menus[0].id}>{menus[0].sections[0].label}</Tabs.Panel>
-      <Tabs.Panel value="messages">Messages tab content</Tabs.Panel>
-      <Tabs.Panel value="settings">Settings tab content</Tabs.Panel>
+      {menus.map((menu) => {
+        return <MenuTabPanel menu={menu} />;
+      })}
     </Tabs>
   );
 };
