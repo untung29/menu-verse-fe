@@ -1,4 +1,4 @@
-import { Card, Text, Image, Group, Button, Container } from "@mantine/core";
+import { Card, Text, Image, Group, Button, Box } from "@mantine/core";
 import { ItemCardProps } from "./type";
 
 const ItemCard = ({
@@ -14,15 +14,13 @@ const ItemCard = ({
         <Image src={imgUrl} alt={description} />
       </Card.Section>
 
-      <Container px="0" py="sm">
-        <div>
-          <Text ta="left" tt="uppercase" fw={600}>
-            {label}
-          </Text>
-          <Text ta="left" fw={400}>
-            {description}
-          </Text>
-        </div>
+      <Box py="sm">
+        <Text ta="left" tt="uppercase" fw={600}>
+          {label}
+        </Text>
+        <Text ta="left" fw={400}>
+          {description}
+        </Text>
 
         <Group pt="lg" justify="space-between">
           <Text ta="left" fw={600}>
@@ -30,7 +28,7 @@ const ItemCard = ({
           </Text>
           <Button onClick={onClick}>More detail</Button>
         </Group>
-      </Container>
+      </Box>
     </Card>
   );
 };
