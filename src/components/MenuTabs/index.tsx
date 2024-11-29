@@ -28,6 +28,7 @@ const MenuTabs = () => {
       classNames={{
         list: isTabletScreen ? classes.tabListTablet : classes.tabList,
         tabLabel: classes.tabLabel,
+        tab: classes.tab,
       }}
     >
       <Tabs.List>
