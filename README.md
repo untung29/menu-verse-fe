@@ -12,3 +12,19 @@ Follow these steps to get MenuVerse Frontend running on your local machine:
 git clone https://github.com/untung29/menu-verse-fe.git
 cd menu_verse
 ```
+
+### **2. Install Dependencies**
+
+Make sure you have Node.js installed (recommended version: >= 18). Then, install the required dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### **3. Run the development server**
+
+```bash
+npm run dev
+```
