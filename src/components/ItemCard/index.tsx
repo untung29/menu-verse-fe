@@ -26,6 +26,7 @@ const ItemCard = ({
   return (
     <>
       <Card
+        onClick={disabled ? undefined : open}
         style={{
           opacity: disabled ? 0.5 : 1,
         }}
