@@ -21,3 +21,8 @@
 .tabListTablet::before {
   border-color: transparent;
 }
+
+.tabLabel {
+  font-size: 1rem;
+  padding: 0.5rem;
+}

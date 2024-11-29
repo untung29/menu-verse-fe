@@ -14,6 +14,7 @@ const MenuTabs = ({ menus }: { menus: Array<MenuType> }) => {
       inverted={isTabletScreen}
       classNames={{
         list: isTabletScreen ? classes.tabListTablet : classes.tabList,
+        tabLabel: classes.tabLabel,
       }}
     >
       <Tabs.List>
