@@ -28,7 +28,7 @@ const ItemCard = ({
   return (
     <>
       <Card
-        onClick={disabled ? undefined : open}
+        onClick={disabled || quantity == 0 ? undefined : open}
         style={{
           opacity: disabled ? 0.5 : 1,
         }}
@@ -54,7 +54,11 @@ const ItemCard = ({
             <Text ta="left" fw={600}>
               ${price}
             </Text>
-            <MVButton disabled={disabled} onClick={open} label={btnLabel} />
+            <MVButton
+              disabled={disabled || quantity == 0}
+              onClick={open}
+              label={btnLabel}
+            />
           </Group>
         </Box>
       </Card>
