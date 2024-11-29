@@ -12,14 +12,17 @@ export const GET_MENUS = gql`
         detail {
           id
           label
+          description
           items {
             detail {
               label
               description
               price
+              quantity
             }
             displayOrder
           }
+          state
         }
         displayOrder
       }

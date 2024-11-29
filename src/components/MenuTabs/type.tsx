@@ -6,7 +6,13 @@ export interface MenuType {
 }
 
 export interface SectionType {
-  detail: { id: string; label: string; items: Array<ItemType> };
+  detail: {
+    id: string;
+    label: string;
+    items: Array<ItemType>;
+    state: string;
+    description?: string;
+  };
   displayOrder: number;
 }
 
@@ -15,6 +21,12 @@ export interface GetMenuResponseType {
 }
 
 export interface ItemType {
-  detail: { id: string; label: string; description: string; price: string };
+  detail: {
+    id: string;
+    label: string;
+    description: string;
+    price: string;
+    quantity: number;
+  };
   displayOrder: number;
 }

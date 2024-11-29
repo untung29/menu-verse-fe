@@ -4,4 +4,6 @@ export interface ItemCardProps {
   description: string;
   price: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  quantity: number;
 }
