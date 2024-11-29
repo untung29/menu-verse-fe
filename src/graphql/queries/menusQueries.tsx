@@ -15,6 +15,7 @@ export const GET_MENUS = gql`
           description
           items {
             detail {
+              id
               label
               description
               price

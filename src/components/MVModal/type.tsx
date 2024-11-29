@@ -4,4 +4,5 @@ export interface MVModalProps {
   imgSrc: string;
   opened: boolean;
   close: () => void;
+  itemId: string;
 }

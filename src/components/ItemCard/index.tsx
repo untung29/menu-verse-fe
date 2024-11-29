@@ -12,6 +12,7 @@ const ItemCard = ({
   price,
   disabled,
   quantity,
+  id,
 }: ItemCardProps) => {
   const [opened, { open, close }] = useDisclosure(false);
   let btnLabel = "More detail";
@@ -58,13 +59,16 @@ const ItemCard = ({
         </Box>
       </Card>
 
-      <MVModal
-        label={label}
-        imgSrc={imgUrl}
-        opened={opened}
-        close={close}
-        description={description}
-      />
+      {opened && (
+        <MVModal
+          itemId={id}
+          label={label}
+          imgSrc={imgUrl}
+          opened={opened}
+          close={close}
+          description={description}
+        />
+      )}
     </>
   );
 };

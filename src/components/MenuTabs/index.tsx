@@ -1,8 +1,8 @@
 import { Tabs } from "@mantine/core";
-import { MenuType } from "./type";
 import MenuTabPanel from "../MenuTabPanel";
 import { useMediaQuery } from "@mantine/hooks";
 import classes from "./MenuTabs.module.css";
+import { MenuType } from "../../types/menu";
 
 const MenuTabs = ({ menus }: { menus: Array<MenuType> }) => {
   const isTabletScreen = useMediaQuery(`(max-width: 998px)`);

@@ -1,7 +1,7 @@
 import { Box, Tabs, Text } from "@mantine/core";
-import { MenuType } from "../MenuTabs/type";
 import classes from "./MenuTabPanel.module.css";
 import ItemCard from "../ItemCard";
+import { MenuType } from "../../types/menu";
 
 const MenuTabPanel = ({ menu }: { menu: MenuType }) => {
   const sortedSections = [...menu.sections].sort(
@@ -49,6 +49,7 @@ const MenuTabPanel = ({ menu }: { menu: MenuType }) => {
               {sortedItems.map((item) => {
                 return (
                   <ItemCard
+                    id={item.detail.id}
                     disabled={!isSectionActive}
                     key={item.detail.id}
                     label={item.detail.label}
