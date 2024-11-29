@@ -13,7 +13,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, max-content));
+  gap: 2rem;
   justify-content: center;
 }
