@@ -31,8 +31,6 @@ const ItemCard = ({
         }}
         shadow="lg"
         padding="lg"
-        w="300"
-        h="515"
         withBorder
       >
         <Card.Section>
