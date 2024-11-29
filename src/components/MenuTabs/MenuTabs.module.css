@@ -1,0 +1,22 @@
+.tabList {
+  height: 100%;
+}
+
+.tabListTablet {
+  flex-wrap: nowrap;
+  overflow: auto;
+  scrollbar-width: none;
+
+  /* border-bottom: 1px solid grey; */
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2); /* Shadow with a light gray color */
+  z-index: 100;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.tabListTablet::before {
+  border-color: transparent;
+}
