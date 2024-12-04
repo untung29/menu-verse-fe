@@ -46,7 +46,7 @@ const MVModal = ({
           <Box>
             <Text>{description}</Text>
 
-            {data?.item.modifierGroups.length !== 0 && (
+            {data && data?.item.modifierGroups.length > 0 && (
               <>
                 <>
                   <Text mt="sm" fw={600}>
